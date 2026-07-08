@@ -1,9 +1,12 @@
 import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import Logo from './Logo.jsx'
+import { useAuth } from '../context/AuthContext.jsx'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
+  const { user, logout } = useAuth()
+  const navigate = useNavigate()
 
   const links = [
     { to: '/', label: 'Home' },
@@ -11,6 +14,12 @@ export default function Navbar() {
     { to: '/about', label: 'About' },
     { to: '/contact', label: 'Contact' },
   ]
+
+  const handleLogout = () => {
+    logout()
+    setOpen(false)
+    navigate('/')
+  }
 
   return (
     <header className="navbar">
@@ -35,6 +44,18 @@ export default function Navbar() {
               {link.label}
             </NavLink>
           ))}
+
+          {user ? (
+            <>
+              <NavLink to="/write" onClick={() => setOpen(false)}>Write</NavLink>
+              <button className="nav-logout" onClick={handleLogout}>Logout</button>
+            </>
+          ) : (
+            <>
+              <NavLink to="/login" onClick={() => setOpen(false)}>Login</NavLink>
+              <NavLink to="/signup" className="nav-signup" onClick={() => setOpen(false)}>Sign Up</NavLink>
+            </>
+          )}
         </nav>
       </div>
     </header>
