@@ -11,8 +11,10 @@ const postSchema = new mongoose.Schema(
       enum: ['Confidence', 'Beauty', 'Passion', 'Periods', 'Real Talk', 'Other'],
       default: 'Other',
     },
-    author: { type: String, default: 'Anonymous' },
+    author: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+    authorName: { type: String, required: true },
     coverImage: { type: String, default: '' },
+    likes: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
   },
   { timestamps: true }
 )
