@@ -96,3 +96,25 @@ main { flex: 1; }
 .form-status.error { color: #ff5252; }
 .direct-email { margin-top: 30px; color: var(--text-muted); font-size: 14px; }
 .direct-email a { color: var(--pink); font-weight: 600; }
+
+.auth-page { max-width: 460px; }
+.auth-page h1 { color: var(--pink); margin-bottom: 24px; }
+.auth-switch { margin-top: 20px; color: var(--text-muted); font-size: 14px; }
+.auth-switch a { color: var(--pink); font-weight: 600; }
+
+.nav-logout { background: none; border: 1px solid var(--pink); color: var(--pink); padding: 6px 16px; border-radius: 20px; font-weight: 600; font-size: 14px; }
+.nav-logout:hover { background: var(--pink); color: var(--white); }
+.nav-signup { background: var(--pink); color: var(--white) !important; padding: 6px 16px; border-radius: 20px; }
+
+select.contact-form select,
+.contact-form select {
+  background: var(--gray); border: 1px solid #2a2a2a; color: var(--white);
+  padding: 12px 14px; border-radius: 8px; font-family: inherit; font-size: 14px;
+}
+
+.like-btn {
+  margin-top: 30px; background: var(--gray); border: 1px solid var(--pink);
+  color: var(--pink); padding: 10px 24px; border-radius: 30px; font-weight: 700;
+  font-size: 15px; transition: all 0.2s;
+}
+.like-btn:hover { background: var(--pink); color: var(--white); }
