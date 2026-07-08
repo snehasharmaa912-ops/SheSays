@@ -8,7 +8,7 @@ const postSchema = new mongoose.Schema(
     content: { type: String, required: true },
     category: {
       type: String,
-      enum: ['Confidence', 'Beauty', 'Passion', 'Periods', 'Real Talk', 'Other'],
+      trim: true,
       default: 'Other',
     },
     author: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
