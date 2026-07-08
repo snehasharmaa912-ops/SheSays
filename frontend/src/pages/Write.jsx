@@ -12,6 +12,7 @@ export default function Write() {
   const [form, setForm] = useState({
     title: '', excerpt: '', content: '', category: 'Confidence', coverImage: '',
   })
+  const [customCategory, setCustomCategory] = useState('')
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
@@ -21,9 +22,16 @@ export default function Write() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setError('')
+
+    const category = form.category === 'Other' ? customCategory.trim() : form.category
+    if (form.category === 'Other' && !category) {
+      setError('Please name your category')
+      return
+    }
+
     setLoading(true)
     try {
-      const post = await createPost({ ...form, slug: slugify(form.title) })
+      const post = await createPost({ ...form, category, slug: slugify(form.title) })
       navigate(`/blog/${post.slug}`)
     } catch (err) {
       setError(err.message)
@@ -43,6 +51,20 @@ export default function Write() {
         <select id="category" name="category" value={form.category} onChange={handleChange}>
           {CATEGORIES.map((c) => <option key={c} value={c}>{c}</option>)}
         </select>
+
+        {form.category === 'Other' && (
+          <>
+            <label htmlFor="customCategory">Name your category</label>
+            <input
+              id="customCategory"
+              name="customCategory"
+              value={customCategory}
+              onChange={(e) => setCustomCategory(e.target.value)}
+              placeholder="e.g. Wellness"
+              required
+            />
+          </>
+        )}
 
         <label htmlFor="excerpt">Short Excerpt</label>
         <input id="excerpt" name="excerpt" value={form.excerpt} onChange={handleChange} required />
