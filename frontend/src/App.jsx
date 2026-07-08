@@ -11,6 +11,7 @@ import Contact from './pages/Contact.jsx'
 import Login from './pages/Login.jsx'
 import Signup from './pages/Signup.jsx'
 import Write from './pages/Write.jsx'
+import EditPost from './pages/EditPost.jsx'
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/write" element={<ProtectedRoute><Write /></ProtectedRoute>} />
+            <Route path="/blog/:slug/edit" element={<ProtectedRoute><EditPost /></ProtectedRoute>} />
           </Routes>
         </main>
         <Footer />
