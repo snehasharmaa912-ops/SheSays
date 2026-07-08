@@ -118,3 +118,17 @@ select.contact-form select,
   font-size: 15px; transition: all 0.2s;
 }
 .like-btn:hover { background: var(--pink); color: var(--white); }
+
+.post-owner-actions { margin-top: 20px; display: flex; gap: 12px; }
+.btn-secondary {
+  background: var(--gray); border: 1px solid var(--pink); color: var(--pink);
+  padding: 10px 22px; border-radius: 30px; font-weight: 600; font-size: 14px;
+  text-decoration: none; display: inline-block; transition: all 0.2s;
+}
+.btn-secondary:hover { background: var(--pink); color: var(--white); }
+.btn-danger {
+  background: var(--gray); border: 1px solid #e04848; color: #e04848;
+  padding: 10px 22px; border-radius: 30px; font-weight: 600; font-size: 14px;
+  transition: all 0.2s;
+}
+.btn-danger:hover { background: #e04848; color: var(--white); }
