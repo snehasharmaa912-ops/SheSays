@@ -1,15 +1,17 @@
 import { useEffect, useState } from 'react'
-import { useParams, Link } from 'react-router-dom'
-import { getPostBySlug, toggleLike } from '../api.js'
+import { useParams, useNavigate, Link } from 'react-router-dom'
+import { getPostBySlug, toggleLike, deletePost } from '../api.js'
 import { useAuth } from '../context/AuthContext.jsx'
 
 export default function BlogPost() {
   const { slug } = useParams()
   const { user } = useAuth()
+  const navigate = useNavigate()
   const [post, setPost] = useState(null)
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(true)
   const [likeCount, setLikeCount] = useState(0)
+  const [deleting, setDeleting] = useState(false)
 
   useEffect(() => {
     getPostBySlug(slug)
@@ -28,6 +30,18 @@ export default function BlogPost() {
       setLikeCount(res.likes)
     } catch (err) {
       setError(err.message)
+    }
+  }
+
+  const handleDelete = async () => {
+    if (!window.confirm('Delete this post? This cannot be undone.')) return
+    setDeleting(true)
+    try {
+      await deletePost(slug)
+      navigate('/blog')
+    } catch (err) {
+      setError(err.message)
+      setDeleting(false)
     }
   }
 
@@ -51,6 +65,16 @@ export default function BlogPost() {
       <button className="like-btn" onClick={handleLike}>
         ♥ {likeCount} {likeCount === 1 ? 'Like' : 'Likes'}
       </button>
+
+      {user && user._id === post.author && (
+        <div className="post-owner-actions">
+          <Link to={`/blog/${slug}/edit`} className="btn-secondary">Edit</Link>
+          <button className="btn-danger" onClick={handleDelete} disabled={deleting}>
+            {deleting ? 'Deleting...' : 'Delete'}
+          </button>
+        </div>
+      )}
+
       {error && <p className="form-status error">{error}</p>}
     </article>
   )
