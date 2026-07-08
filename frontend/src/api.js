@@ -16,7 +16,6 @@ function authHeaders() {
   return token ? { Authorization: `Bearer ${token}` } : {}
 }
 
-// Auth
 export const registerUser = async (payload) => {
   const res = await fetch(`${API_URL}/auth/register`, {
     method: 'POST',
@@ -35,7 +34,6 @@ export const loginUser = async (payload) => {
   return handleResponse(res)
 }
 
-// Posts
 export const getPosts = async (category) => {
   const query = category ? `?category=${encodeURIComponent(category)}` : ''
   const res = await fetch(`${API_URL}/posts${query}`)
@@ -56,6 +54,23 @@ export const createPost = async (postData) => {
   return handleResponse(res)
 }
 
+export const updatePost = async (slug, postData) => {
+  const res = await fetch(`${API_URL}/posts/${slug}`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json', ...authHeaders() },
+    body: JSON.stringify(postData),
+  })
+  return handleResponse(res)
+}
+
+export const deletePost = async (slug) => {
+  const res = await fetch(`${API_URL}/posts/${slug}`, {
+    method: 'DELETE',
+    headers: { ...authHeaders() },
+  })
+  return handleResponse(res)
+}
+
 export const toggleLike = async (slug) => {
   const res = await fetch(`${API_URL}/posts/${slug}/like`, {
     method: 'POST',
@@ -64,7 +79,6 @@ export const toggleLike = async (slug) => {
   return handleResponse(res)
 }
 
-// Contact
 export const sendContactMessage = async (formData) => {
   const res = await fetch(`${API_URL}/contact`, {
     method: 'POST',
