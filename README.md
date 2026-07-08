@@ -124,7 +124,7 @@ Others read, relate, and ❤️ like the stories that speak to them
 | Layer | Where |
 |:---|:---|
 | 🖥️ Frontend | [Vercel](https://she-says-flame.vercel.app) |
-| ⚙️ Backend | Render / Railway / Vercel |
+| ⚙️ Backend | Render |
 | 🗄️ Database | MongoDB Atlas |
 
 </div>
