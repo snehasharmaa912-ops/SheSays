@@ -11,6 +11,6 @@ Express + MongoDB API for the SheSays platform.
 - POST /api/contact
 
 ## Setup
-1. Copy '.env.example` to `.env` and fill in values
-2. npm install
-3. npm run dev
+1. Copy .env.example to .env and fill in values
+4. npm install
+5. npm run dev
