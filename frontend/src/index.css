@@ -26,7 +26,6 @@ button { cursor: pointer; font-family: inherit; }
 .app-shell { display: flex; flex-direction: column; min-height: 100vh; }
 main { flex: 1; }
 
-/* Navbar */
 .navbar { background: var(--gray); border-bottom: 1px solid #2a2a2a; position: sticky; top: 0; z-index: 10; }
 .navbar-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; }
 .brand { display: flex; align-items: center; gap: 10px; font-size: 22px; font-weight: 800; color: var(--pink); }
@@ -41,24 +40,20 @@ main { flex: 1; }
   .nav-links.open { display: flex; }
 }
 
-/* Footer */
 .footer { background: var(--gray); border-top: 1px solid #2a2a2a; padding: 40px 20px; text-align: center; }
 .footer-brand { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 20px; font-weight: 700; color: var(--pink); margin-bottom: 10px; }
 .footer p { color: var(--text-muted); font-size: 14px; max-width: 500px; margin: 8px auto; }
 .footer-email a { color: var(--pink); font-weight: 600; }
 .footer-copy { font-size: 12px; opacity: 0.6; }
 
-/* Page layout */
 .page { max-width: 1000px; margin: 0 auto; padding: 50px 20px; }
 
-/* Hero */
 .hero { text-align: center; padding: 80px 20px; }
 .hero h1 { font-size: 48px; color: var(--pink); margin-bottom: 20px; }
 .hero p { color: var(--text-muted); max-width: 560px; margin: 0 auto 30px; font-size: 17px; }
 .btn-primary { display: inline-block; background: var(--pink); color: var(--white); padding: 14px 30px; border-radius: 30px; font-weight: 600; border: none; font-size: 15px; transition: background 0.2s; }
 .btn-primary:hover { background: var(--pink-dark); }
 
-/* Post grid */
 .home-posts { padding: 40px 0; }
 .home-posts h2 { color: var(--white); margin-bottom: 24px; text-align: center; }
 .post-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 24px; }
@@ -72,24 +67,20 @@ main { flex: 1; }
 .blog-card-body p { color: var(--text-muted); font-size: 14px; margin-bottom: 10px; }
 .blog-card-author { font-size: 12px; color: var(--pink); }
 
-/* Blog listing */
 .category-filters { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
 .category-filters button { background: var(--gray); color: var(--text-muted); border: 1px solid #2a2a2a; padding: 8px 18px; border-radius: 20px; font-size: 13px; font-weight: 600; transition: all 0.2s; }
 .category-filters button:hover { border-color: var(--pink); }
 .category-filters button.active { background: var(--pink); color: var(--white); border-color: var(--pink); }
 
-/* Blog post */
 .back-link { display: inline-block; margin-bottom: 20px; color: var(--pink); font-weight: 600; }
 .blog-post h1 { font-size: 36px; margin: 14px 0; color: var(--white); }
 .blog-post-author { color: var(--text-muted); margin-bottom: 20px; font-style: italic; }
 .blog-post-image { width: 100%; border-radius: 14px; margin-bottom: 24px; }
 .blog-post-content { color: var(--text-muted); font-size: 17px; white-space: pre-line; }
 
-/* About */
 .about-page p { color: var(--text-muted); font-size: 16px; margin-bottom: 18px; max-width: 700px; }
 .about-page h1 { color: var(--pink); margin-bottom: 24px; }
 
-/* Contact */
 .contact-page h1 { color: var(--pink); margin-bottom: 10px; }
 .contact-page > p { color: var(--text-muted); margin-bottom: 30px; }
 .contact-form { display: flex; flex-direction: column; gap: 6px; max-width: 520px; }
