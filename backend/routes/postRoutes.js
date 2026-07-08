@@ -5,14 +5,17 @@ import {
   createPost,
   updatePost,
   deletePost,
+  toggleLike,
 } from '../controllers/postController.js'
+import { protect } from '../middleware/authMiddleware.js'
 
 const router = express.Router()
 
 router.get('/', getPosts)
 router.get('/:slug', getPostBySlug)
-router.post('/', createPost)
-router.put('/:slug', updatePost)
-router.delete('/:slug', deletePost)
+router.post('/', protect, createPost)
+router.put('/:slug', protect, updatePost)
+router.delete('/:slug', protect, deletePost)
+router.post('/:slug/like', protect, toggleLike)
 
 export default router
