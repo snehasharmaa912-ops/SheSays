@@ -75,6 +75,32 @@ SheSays is a full-stack MERN blog built as a **safe, judgment-free space for wom
 
 <br/>
 
+## 🔮 How It Works
+
+<div align="center">
+
+### 1️⃣ Sign Up
+Create your account in seconds — just name, email & password
+
+⬇️
+
+### 2️⃣ Pick Your Voice
+Choose a category — Confidence · Beauty · Passion · Real Talk — or just write freely
+
+⬇️
+
+### 3️⃣ Share Your Story
+Write it out in a clean, distraction-free editor
+
+⬇️
+
+### 4️⃣ Connect
+Others read, relate, and ❤️ like the stories that speak to them
+
+</div>
+
+<br/>
+
 ## 🧱 Tech Stack
 
 <div align="center">
@@ -88,29 +114,6 @@ SheSays is a full-stack MERN blog built as a **safe, judgment-free space for wom
 | **Hosting** | Vercel |
 
 </div>
-
-<br/>
-
-## 🔌 API Reference
-
-<div align="center">
-
-| Method | Endpoint | Description | Auth |
-|:---:|:---|:---|:---:|
-| `POST` | `/api/auth/register` | Create an account | – |
-| `POST` | `/api/auth/login` | Log in | – |
-| `GET` | `/api/auth/me` | Get current user | ✅ |
-| `GET` | `/api/posts` | List all posts | – |
-| `GET` | `/api/posts/:slug` | Get a single post | – |
-| `POST` | `/api/posts` | Create a post | ✅ |
-| `PUT` | `/api/posts/:slug` | Edit a post | ✅ |
-| `DELETE` | `/api/posts/:slug` | Delete a post | ✅ |
-| `POST` | `/api/posts/:slug/like` | Like / unlike a post | ✅ |
-| `POST` | `/api/contact` | Send a contact message | – |
-
-</div>
-
-**Post categories:** `Confidence` · `Beauty` · `Passion` · `Real Talk` · `Other`
 
 <br/>
 
