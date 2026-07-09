@@ -12,7 +12,7 @@ export default function BlogCard({ post }) {
         <span className="blog-card-category">{post.category}</span>
         <h3>{post.title}</h3>
         <p>{post.excerpt}</p>
-        <span className="blog-card-author">— {post.author}</span>
+        <span className="blog-card-author">— {post.authorName}</span>
       </div>
     </Link>
   )
