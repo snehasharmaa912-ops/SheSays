@@ -28,7 +28,8 @@ main { flex: 1; }
 
 .navbar { background: var(--gray); border-bottom: 1px solid #2a2a2a; position: sticky; top: 0; z-index: 10; }
 .navbar-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; }
-.brand { display: flex; align-items: center; gap: 10px; font-size: 22px; font-weight: 800; color: var(--pink); }
+.brand { display: flex; align-items: center; gap: 10px; font-family: 'Playfair Display', serif; font-style: italic; font-size: 24px; font-weight: 700; color: var(--white); }
+.brand-accent { color: var(--pink); }
 .nav-links { display: flex; gap: 28px; }
 .nav-links a { font-weight: 500; color: var(--text-muted); transition: color 0.2s; }
 .nav-links a:hover, .nav-links a.active { color: var(--pink); }
@@ -41,7 +42,7 @@ main { flex: 1; }
 }
 
 .footer { background: var(--gray); border-top: 1px solid #2a2a2a; padding: 40px 20px; text-align: center; }
-.footer-brand { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 20px; font-weight: 700; color: var(--pink); margin-bottom: 10px; }
+.footer-brand { display: flex; align-items: center; justify-content: center; gap: 8px; font-family: 'Playfair Display', serif; font-style: italic; font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 10px; }
 .footer p { color: var(--text-muted); font-size: 14px; max-width: 500px; margin: 8px auto; }
 .footer-email a { color: var(--pink); font-weight: 600; }
 .footer-copy { font-size: 12px; opacity: 0.6; }
