@@ -26,7 +26,7 @@ export default function Navbar() {
       <div className="navbar-inner">
         <NavLink to="/" className="brand" onClick={() => setOpen(false)}>
           <Logo size={36} />
-          <span>SheSays</span>
+          <span>She<span className="brand-accent">Says</span></span>
         </NavLink>
 
         <button className="menu-toggle" onClick={() => setOpen(!open)} aria-label="Toggle menu">
