@@ -133,3 +133,38 @@ select.contact-form select,
   transition: all 0.2s;
 }
 .btn-danger:hover { background: #e04848; color: var(--white); }
+
+.comments-section { margin-top: 50px; border-top: 1px solid #2a2a2a; padding-top: 30px; }
+.comments-section h2 { font-size: 22px; margin-bottom: 20px; }
+
+.comment-form { display: flex; flex-direction: column; gap: 10px; max-width: 600px; margin-bottom: 24px; }
+.comment-form textarea {
+  background: var(--gray); border: 1px solid #2a2a2a; color: var(--white);
+  padding: 12px 14px; border-radius: 8px; font-family: inherit; font-size: 14px; resize: vertical;
+}
+.comment-form textarea:focus { outline: none; border-color: var(--pink); }
+.comment-form-actions { display: flex; gap: 10px; }
+
+.comment-login-prompt { color: var(--text-muted); margin-bottom: 24px; }
+.comment-login-prompt a { color: var(--pink); font-weight: 600; }
+.no-comments { color: var(--text-muted); font-size: 14px; }
+
+.comment-list, .comment-replies { list-style: none; }
+.comment-replies { margin-top: 14px; margin-left: 24px; padding-left: 16px; border-left: 2px solid #2a2a2a; }
+
+.comment-item { background: var(--gray); border: 1px solid #2a2a2a; border-radius: 12px; padding: 16px 18px; margin-bottom: 14px; }
+.comment-header { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; flex-wrap: wrap; }
+.comment-author { font-weight: 700; color: var(--white); font-size: 14px; }
+.comment-author-badge {
+  background: var(--pink); color: var(--white); font-size: 11px; font-weight: 700;
+  padding: 2px 8px; border-radius: 10px; margin-left: 6px; text-transform: uppercase; letter-spacing: 0.5px;
+}
+.comment-time { color: var(--text-muted); font-size: 12px; }
+.comment-content { color: var(--text-muted); font-size: 14px; line-height: 1.5; margin-bottom: 8px; }
+.comment-actions { display: flex; gap: 16px; }
+.comment-reply-btn, .comment-delete-btn {
+  background: none; border: none; color: var(--pink); font-size: 13px; font-weight: 600; padding: 0;
+}
+.comment-delete-btn { color: #e04848; }
+.comment-reply-btn:hover, .comment-delete-btn:hover { text-decoration: underline; }
+.comment-item .comment-form { margin-top: 14px; margin-bottom: 0; }
