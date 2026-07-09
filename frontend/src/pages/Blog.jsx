@@ -2,12 +2,25 @@ import { useEffect, useState } from 'react'
 import { getPosts } from '../api.js'
 import BlogCard from '../components/BlogCard.jsx'
 
-const CATEGORIES = ['All', 'Confidence', 'Beauty', 'Passion', 'Periods', 'Real Talk', 'Other']
+const BASE_CATEGORIES = ['Confidence', 'Beauty', 'Passion', 'Periods', 'Real Talk']
 
 export default function Blog() {
   const [posts, setPosts] = useState([])
   const [category, setCategory] = useState('All')
   const [loading, setLoading] = useState(true)
+  const [categories, setCategories] = useState(['All', ...BASE_CATEGORIES])
+
+  useEffect(() => {
+    getPosts()
+      .then((allPosts) => {
+        const customCats = allPosts
+          .map((p) => p.category)
+          .filter((c) => c && !BASE_CATEGORIES.includes(c) && c !== 'Other')
+        const uniqueCustom = [...new Set(customCats)].sort()
+        setCategories(['All', ...BASE_CATEGORIES, ...uniqueCustom, 'Other'])
+      })
+      .catch(() => {})
+  }, [])
 
   useEffect(() => {
     setLoading(true)
@@ -21,7 +34,7 @@ export default function Blog() {
     <div className="page">
       <h1>The Blog</h1>
       <div className="category-filters">
-        {CATEGORIES.map((cat) => (
+        {categories.map((cat) => (
           <button
             key={cat}
             className={cat === category ? 'active' : ''}
