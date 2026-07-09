@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="footer-inner">
         <div className="footer-brand">
           <Logo size={30} />
-          <span>SheSays</span>
+          <span>She<span style={{ color: 'var(--pink)' }}>Says</span></span>
         </div>
         <p>A space where girls talk about everything — confidence, beauty, passion, periods, real life.</p>
         <p className="footer-email">
