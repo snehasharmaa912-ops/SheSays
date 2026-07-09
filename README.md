@@ -13,7 +13,11 @@
 
 [
 
+
+
 ![🔗 Visit Live Site](https://img.shields.io/badge/🔗_VISIT_LIVE_SITE-she--says--flame.vercel.app-ff4d8d?style=for-the-badge&logoColor=white)
+
+
 
 ](https://she-says-flame.vercel.app)
 
@@ -23,6 +27,7 @@
 <img src="https://img.shields.io/badge/Vite-5.4-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
 <img src="https://img.shields.io/badge/Node.js-Express-339933?style=for-the-badge&logo=node.js&logoColor=white" />
 <img src="https://img.shields.io/badge/MongoDB-Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white" />
+<img src="https://img.shields.io/badge/Cloudinary-Media-3448C5?style=for-the-badge&logo=cloudinary&logoColor=white" />
 
 <br/>
 
@@ -73,35 +78,42 @@ Clean dark UI. Hot-pink accents. No clutter — just voices. 🎙️
 
 <table>
 <tr>
-<td align="center" width="20%">
+<td align="center" width="16%">
 
 ### 🖋️
 **Write & Publish**
 <sub>Share your own posts</sub>
 
 </td>
-<td align="center" width="20%">
+<td align="center" width="16%">
 
 ### 🔐
 **Secure Auth**
 <sub>JWT + bcrypt login</sub>
 
 </td>
-<td align="center" width="20%">
+<td align="center" width="16%">
+
+### 🖼️
+**Cloud Images**
+<sub>Persistent uploads via Cloudinary</sub>
+
+</td>
+<td align="center" width="16%">
 
 ### 💌
 **Contact Form**
 <sub>Reach out via email</sub>
 
 </td>
-<td align="center" width="20%">
+<td align="center" width="16%">
 
 ### ❤️
 **Like Posts**
 <sub>Support other voices</sub>
 
 </td>
-<td align="center" width="20%">
+<td align="center" width="16%">
 
 ### 🌙
 **Dark & Pink UI**
@@ -145,11 +157,11 @@ the stories that speak to them
 
 <div align="center">
 
-| 🎨 Frontend | ⚙️ Backend | 🔑 Auth | 📧 Email | ☁️ Hosting |
-|:---:|:---:|:---:|:---:|:---:|
-| React 18 | Node.js | JWT | Resend | Vercel |
-| React Router | Express | bcrypt | | |
-| Vite | MongoDB | | | |
+| 🎨 Frontend | ⚙️ Backend | 🔑 Auth | 📧 Email | 🖼️ Media | ☁️ Hosting |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| React 18 | Node.js | JWT | Resend | Cloudinary | Vercel |
+| React Router | Express | bcrypt | | | Render |
+| Vite | MongoDB | | | | |
 
 </div>
 
@@ -164,8 +176,13 @@ the stories that speak to them
 | 🖥️ | **Frontend** → [she-says-flame.vercel.app](https://she-says-flame.vercel.app) |
 | ⚙️ | **Backend** → Render |
 | 🗄️ | **Database** → MongoDB Atlas |
+| 🖼️ | **Media Storage** → Cloudinary |
 
 </div>
+
+<br/>
+
+Cover images and other uploads are streamed directly to Cloudinary rather than saved on the backend server, so they persist across Render redeploys and restarts.
 
 <br/>
 
