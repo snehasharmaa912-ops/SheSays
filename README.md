@@ -162,7 +162,7 @@ the stories that speak to them
 | | |
 |:---:|:---|
 | 🖥️ | **Frontend** → [she-says-flame.vercel.app](https://she-says-flame.vercel.app) |
-| ⚙️ | **Backend** → Render / Railway / Vercel |
+| ⚙️ | **Backend** → Render |
 | 🗄️ | **Database** → MongoDB Atlas |
 
 </div>
