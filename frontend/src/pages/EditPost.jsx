@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams, Link } from 'react-router-dom'
-import { getPostBySlug, updatePost } from '../api.js'
+import { getPostBySlug, updatePost, uploadImage } from '../api.js'
 import { useAuth } from '../context/AuthContext.jsx'
 
 const STANDARD_CATEGORIES = ['Confidence', 'Beauty', 'Passion', 'Periods', 'Real Talk']
@@ -16,6 +16,7 @@ export default function EditPost() {
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(true)
   const [saving, setSaving] = useState(false)
+  const [uploading, setUploading] = useState(false)
 
   useEffect(() => {
     getPostBySlug(slug)
@@ -39,6 +40,21 @@ export default function EditPost() {
   }, [slug, user])
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value })
+
+  const handleCoverImagePick = async (e) => {
+    const file = e.target.files?.[0]
+    if (!file) return
+    setError('')
+    setUploading(true)
+    try {
+      const url = await uploadImage(file)
+      setForm((prev) => ({ ...prev, coverImage: url }))
+    } catch (err) {
+      setError(err.message)
+    } finally {
+      setUploading(false)
+    }
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -98,13 +114,26 @@ export default function EditPost() {
         <label htmlFor="excerpt">Short Excerpt</label>
         <input id="excerpt" name="excerpt" value={form.excerpt} onChange={handleChange} required />
 
-        <label htmlFor="coverImage">Cover Image URL (optional)</label>
-        <input id="coverImage" name="coverImage" value={form.coverImage} onChange={handleChange} />
+        <label htmlFor="coverImage">Cover Image (optional)</label>
+        <input
+          id="coverImage"
+          type="file"
+          accept="image/*"
+          onChange={handleCoverImagePick}
+        />
+        {uploading && <p className="form-status">Uploading photo...</p>}
+        {form.coverImage && !uploading && (
+          <img
+            src={form.coverImage}
+            alt="Cover preview"
+            style={{ maxWidth: '100%', maxHeight: 200, borderRadius: 8, marginTop: 8 }}
+          />
+        )}
 
         <label htmlFor="content">Content</label>
         <textarea id="content" name="content" rows="10" value={form.content} onChange={handleChange} required />
 
-        <button type="submit" className="btn-primary" disabled={saving}>
+        <button type="submit" className="btn-primary" disabled={saving || uploading}>
           {saving ? 'Saving...' : 'Save Changes'}
         </button>
 
