@@ -91,6 +91,27 @@ export const uploadImage = async (file) => {
   return new URL(data.url, API_URL).href
 }
 
+export const getComments = async (slug) => {
+  const res = await fetch(`${API_URL}/posts/${slug}/comments`)
+  return handleResponse(res)
+}
+
+export const createComment = async (slug, { content, parentComment }) => {
+  const res = await fetch(`${API_URL}/posts/${slug}/comments`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', ...authHeaders() },
+    body: JSON.stringify({ content, parentComment }),
+  })
+  return handleResponse(res)
+}
+
+export const deleteComment = async (slug, commentId) => {
+  const res = await fetch(`${API_URL}/posts/${slug}/comments/${commentId}`, {
+    method: 'DELETE',
+    headers: { ...authHeaders() },
+  })
+  return handleResponse(res)
+}
 export const sendContactMessage = async (formData) => {
   const res = await fetch(`${API_URL}/contact`, {
     method: 'POST',
