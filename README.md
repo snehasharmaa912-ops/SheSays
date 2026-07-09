@@ -1,64 +1,69 @@
 <div align="center">
 
-# 💗 SheSays
-### *Speak your truth.*
+<img src="https://img.shields.io/badge/💗-SheSays-ff4d8d?style=for-the-badge&labelColor=1a1a1a" height="60"/>
 
-<img src="https://img.shields.io/badge/for-Women-ff4d8d?style=for-the-badge&logo=heart&logoColor=white" />
+<br/><br/>
 
-**A judgment-free space for women to talk about anything and everything — confidence, beauty, passion, real life — without filters.**
+# Speak your truth.
+
+**A judgment-free space for women to talk about anything and everything —**
+**confidence, beauty, passion, real life — without filters.**
 
 <br/>
 
 [
 
-![Live Demo](https://img.shields.io/badge/🔗_VISIT_LIVE_SITE-she--says--flame.vercel.app-ff4d8d?style=for-the-badge&logoColor=white)
+![🔗 Visit Live Site](https://img.shields.io/badge/🔗_VISIT_LIVE_SITE-she--says--flame.vercel.app-ff4d8d?style=for-the-badge&logoColor=white)
 
 ](https://she-says-flame.vercel.app)
 
 <br/>
 
+<img src="https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
+<img src="https://img.shields.io/badge/Vite-5.4-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+<img src="https://img.shields.io/badge/Node.js-Express-339933?style=for-the-badge&logo=node.js&logoColor=white" />
+<img src="https://img.shields.io/badge/MongoDB-Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white" />
 
+<br/>
 
-![React](https://img.shields.io/badge/React-18.3-61DAFB?style=flat-square&logo=react&logoColor=black)
-
-
-
-
-![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?style=flat-square&logo=vite&logoColor=white)
-
-
-
-
-![Node](https://img.shields.io/badge/Node-Express-339933?style=flat-square&logo=node.js&logoColor=white)
-
-
-
-
-![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?style=flat-square&logo=mongodb&logoColor=white)
-
-
-
-
-![JWT](https://img.shields.io/badge/Auth-JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white)
-
-
-
-
-![License](https://img.shields.io/badge/license-MIT-lightgrey?style=flat-square)
-
-
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 </div>
 
 <br/>
 
-> *"Confidence. Beauty. Passion. Real talk. Nothing is off limits here."*
+<div align="center">
 
-<br/>
+### 🌸 *"Confidence. Beauty. Passion. Real talk. Nothing is off limits here."* 🌸
+
+</div>
+
+<br/><br/>
 
 ## ✨ What is SheSays?
 
-SheSays is a full-stack MERN blog built as a **safe, judgment-free space for women** to share their stories. Write about confidence, beauty, passion, real talk — or anything else on your mind — and connect with stories that speak to you. Clean dark UI, hot-pink accents, and a straightforward writing flow. No clutter, just voices.
+<table>
+<tr>
+<td width="60%" valign="top">
+
+SheSays is a full-stack MERN blog built as a **safe, judgment-free space for women** to share their stories.
+
+Write about confidence, beauty, passion, real talk — or anything else on your mind — and connect with stories that speak to you.
+
+Clean dark UI. Hot-pink accents. No clutter — just voices. 🎙️
+
+</td>
+<td width="40%" valign="top">
+
+╭─────────────╮
+│  💗 SheSays │
+│             │
+│  "write it  │
+│   loud."    │
+╰─────────────╯
+</td>
+</tr>
+</table>
 
 <br/>
 
@@ -66,38 +71,73 @@ SheSays is a full-stack MERN blog built as a **safe, judgment-free space for wom
 
 <div align="center">
 
-| | | |
-|:---:|:---:|:---:|
-| 🖋️ **Write & Publish**<br/>Share your own posts | 🔐 **Secure Auth**<br/>JWT + bcrypt login | 💌 **Contact Form**<br/>Reach out via email |
-| ❤️ **Like Posts**<br/>Show support for stories | 🏷️ **Categories**<br/>Confidence · Beauty · Passion · Real Talk | 🌙 **Dark, Pink UI**<br/>Warm & inviting design |
+<table>
+<tr>
+<td align="center" width="20%">
+
+### 🖋️
+**Write & Publish**
+<sub>Share your own posts</sub>
+
+</td>
+<td align="center" width="20%">
+
+### 🔐
+**Secure Auth**
+<sub>JWT + bcrypt login</sub>
+
+</td>
+<td align="center" width="20%">
+
+### 💌
+**Contact Form**
+<sub>Reach out via email</sub>
+
+</td>
+<td align="center" width="20%">
+
+### ❤️
+**Like Posts**
+<sub>Support other voices</sub>
+
+</td>
+<td align="center" width="20%">
+
+### 🌙
+**Dark & Pink UI**
+<sub>Warm, inviting design</sub>
+
+</td>
+</tr>
+</table>
 
 </div>
+
+<br/>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 <br/>
 
 ## 🔮 How It Works
 
 <div align="center">
-
-### 1️⃣ Sign Up
-Create your account in seconds — just name, email & password
-
-⬇️
-
-### 2️⃣ Pick Your Voice
-Choose a category — Confidence · Beauty · Passion · Real Talk — or just write freely
-
-⬇️
-
-### 3️⃣ Share Your Story
-Write it out in a clean, distraction-free editor
-
-⬇️
-
-### 4️⃣ Connect
-Others read, relate, and ❤️ like the stories that speak to them
-
+①  SIGN UP           →   Create your account in seconds
+│                    just name, email & password
+▼
+②  PICK YOUR VOICE   →   Confidence · Beauty · Passion
+│                    Real Talk — or write freely
+▼
+③  SHARE YOUR STORY  →   Clean, distraction-free editor
+│
+▼
+④  CONNECT           →   Others read, relate & ❤️ like
+the stories that speak to them
 </div>
+
+<br/>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 <br/>
 
@@ -105,13 +145,11 @@ Others read, relate, and ❤️ like the stories that speak to them
 
 <div align="center">
 
-| Layer | Technology |
-|:---|:---|
-| **Frontend** | React 18 · React Router · Vite |
-| **Backend** | Node.js · Express · MongoDB (Mongoose) |
-| **Auth** | JWT · bcrypt |
-| **Email** | Resend API |
-| **Hosting** | Vercel |
+| 🎨 Frontend | ⚙️ Backend | 🔑 Auth | 📧 Email | ☁️ Hosting |
+|:---:|:---:|:---:|:---:|:---:|
+| React 18 | Node.js | JWT | Resend | Vercel |
+| React Router | Express | bcrypt | | |
+| Vite | MongoDB | | | |
 
 </div>
 
@@ -121,13 +159,17 @@ Others read, relate, and ❤️ like the stories that speak to them
 
 <div align="center">
 
-| Layer | Where |
-|:---|:---|
-| 🖥️ Frontend | [Vercel](https://she-says-flame.vercel.app) |
-| ⚙️ Backend | Render |
-| 🗄️ Database | MongoDB Atlas |
+| | |
+|:---:|:---|
+| 🖥️ | **Frontend** → [she-says-flame.vercel.app](https://she-says-flame.vercel.app) |
+| ⚙️ | **Backend** → Render / Railway / Vercel |
+| 🗄️ | **Database** → MongoDB Atlas |
 
 </div>
+
+<br/>
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 <br/>
 
@@ -139,10 +181,12 @@ Pull requests are welcome! For big changes, please open an issue first to discus
 
 <div align="center">
 
----
-
 ### Made with 💗 for every woman who has a story to tell.
 
-<img src="https://img.shields.io/badge/-Speak_Your_Truth-ff4d8d?style=for-the-badge" />
+<img src="https://img.shields.io/badge/-Speak_Your_Truth-ff4d8d?style=for-the-badge"/>
+
+<br/><br/>
+
+⭐ *If this project resonates with you, consider giving it a star* ⭐
 
 </div>
