@@ -1,19 +1,20 @@
 import Post from '../models/Post.js'
+import { asyncHandler } from '../utils/asyncHandler.js'
 
-export const getPosts = async (req, res) => {
+export const getPosts = asyncHandler(async (req, res) => {
   const { category } = req.query
   const filter = category ? { category } : {}
   const posts = await Post.find(filter).sort({ createdAt: -1 })
   res.json(posts)
-}
+})
 
-export const getPostBySlug = async (req, res) => {
+export const getPostBySlug = asyncHandler(async (req, res) => {
   const post = await Post.findOne({ slug: req.params.slug })
   if (!post) return res.status(404).json({ message: 'Post not found' })
   res.json(post)
-}
+})
 
-export const createPost = async (req, res) => {
+export const createPost = asyncHandler(async (req, res) => {
   try {
     const post = await Post.create({
       ...req.body,
@@ -24,9 +25,9 @@ export const createPost = async (req, res) => {
   } catch (err) {
     res.status(400).json({ message: err.message })
   }
-}
+})
 
-export const updatePost = async (req, res) => {
+export const updatePost = asyncHandler(async (req, res) => {
   const post = await Post.findOne({ slug: req.params.slug })
   if (!post) return res.status(404).json({ message: 'Post not found' })
   if (post.author.toString() !== req.user._id.toString()) {
@@ -35,9 +36,9 @@ export const updatePost = async (req, res) => {
   Object.assign(post, req.body)
   await post.save()
   res.json(post)
-}
+})
 
-export const deletePost = async (req, res) => {
+export const deletePost = asyncHandler(async (req, res) => {
   const post = await Post.findOne({ slug: req.params.slug })
   if (!post) return res.status(404).json({ message: 'Post not found' })
   if (post.author.toString() !== req.user._id.toString()) {
@@ -45,9 +46,9 @@ export const deletePost = async (req, res) => {
   }
   await post.deleteOne()
   res.json({ message: 'Post deleted' })
-}
+})
 
-export const toggleLike = async (req, res) => {
+export const toggleLike = asyncHandler(async (req, res) => {
   const post = await Post.findOne({ slug: req.params.slug })
   if (!post) return res.status(404).json({ message: 'Post not found' })
 
@@ -62,4 +63,4 @@ export const toggleLike = async (req, res) => {
 
   await post.save()
   res.json({ likes: post.likes.length, liked: !alreadyLiked })
-}
+})
