@@ -79,6 +79,18 @@ export const toggleLike = async (slug) => {
   return handleResponse(res)
 }
 
+export const uploadImage = async (file) => {
+  const body = new FormData()
+  body.append('image', file)
+  const res = await fetch(`${API_URL}/upload`, {
+    method: 'POST',
+    headers: { ...authHeaders() },
+    body,
+  })
+  const data = await handleResponse(res)
+  return new URL(data.url, API_URL).href
+}
+
 export const sendContactMessage = async (formData) => {
   const res = await fetch(`${API_URL}/contact`, {
     method: 'POST',
