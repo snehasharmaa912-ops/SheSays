@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
 import { getPostBySlug, toggleLike, deletePost } from '../api.js'
 import { useAuth } from '../context/AuthContext.jsx'
+import Comments from '../components/Comments.jsx'
 
 export default function BlogPost() {
   const { slug } = useParams()
@@ -76,6 +77,8 @@ export default function BlogPost() {
       )}
 
       {error && <p className="form-status error">{error}</p>}
+
+      <Comments slug={slug} postAuthorId={post.author} />
     </article>
   )
 }
