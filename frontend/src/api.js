@@ -88,7 +88,7 @@ export const uploadImage = async (file) => {
     body,
   })
   const data = await handleResponse(res)
-  return new URL(data.url, API_URL).href
+  return data.url
 }
 
 export const getComments = async (slug) => {
@@ -119,4 +119,4 @@ export const sendContactMessage = async (formData) => {
     body: JSON.stringify(formData),
   })
   return handleResponse(res)
-}
+    }
